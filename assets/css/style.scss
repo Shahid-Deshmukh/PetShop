@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family: 'poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:  .2s linear;
+    
+}
+
+$carrot-color:#e67e22;
+$black:#130f40;
+$white:#fff;
+$light-color:#666;
+$light-bg:#eee;
+$border: .2rem solid black;
+$box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:1.5rem;
+}
+
+@mixin form-btn{
+    width:100%;
+    text-align: center;
+
+    &:hover{
+        background: $black;
+    }
+}
+
+@mixin white-btn{
+    color:$white;
+    border-color: $white;
+
+    &:hover{
+        color: $black;
+    }
+
+    &::before{
+        background:$white;
+    }
+}
+
+
+
+html{
+    font-size: 65%;
+    // overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    max-width: none;
+    
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $carrot-color;
+        border-radius: 5rem;
+    }
+
+}
+
+section{
+    padding: 5rem 9%;
+}
+
+.heading{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+    color: $black;
+}
+
+span{
+    color: $carrot-color;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.8rem;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border: $border;
+    cursor: pointer;
+    background:none;
+    color: $black;
+    font-size: 1.7rem;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $black;
+        z-index: -1;
+        transition: .2s linear;
+        clip-path: circle(0% at 0% 5%);
+    }
+    &:hover::before{
+        clip-path: circle(100%);
+    }
+    &:hover{
+        color: $white;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+}
+
+
+
+
+ #menu-btn{
+        display: none;
+    }
+
+
+    
+@import 'header', 'home', 'about', 'shop','mediaquery', 'services', 'plan', 'contact', 'footer';
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

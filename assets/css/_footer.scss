@@ -1,0 +1,30 @@
+.footer{
+    position: relative;
+    background: url(/assets/img/footer-back-img.jpeg) no-repeat;
+    background-position: center;
+    background-size: center;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+
+    .share{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:1.5rem;
+
+        a{
+            @include white-btn();
+        }
+    }
+
+    .credit{
+        font-size: 1.6rem;
+        text-align: center;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        color:$white;
+
+    }
+
+
+}

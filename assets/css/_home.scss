@@ -1,0 +1,29 @@
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: url(/assets/img/home-background.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+    .content{
+        width:50rem;
+
+        h3{
+            font-size: 6rem;
+            color:$white;
+        padding-bottom: 1rem;       
+    
+    }
+
+    span{
+        color:$carrot-color;
+    }
+
+    .btn{
+        @include white-btn();
+    }
+    }
+}
